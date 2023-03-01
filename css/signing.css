@@ -1,0 +1,53 @@
+.signing-form {
+    min-width: 320px;
+    max-width: 423px;
+    height: 203px;
+
+    background-color: var(--main-bg-color);
+
+    margin: 0 auto;
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+}
+
+.signing-form * {
+    display: block;
+}
+
+.signing-form__label {
+    margin-top: 21px;
+    font-size: 12px;
+
+    color: var(--main-text-color);
+}
+
+.signing-form__input {
+    margin-top: 7px;
+    padding-left: 10px;
+    background-color: var(--no-bg-color);
+    width: 100%;
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+
+    color: var(--input-text-color);
+}
+
+.signing-form__submit {
+    margin: 27px auto;
+
+    border: none;
+    background-color: var(--no-bg-color);
+    border-radius: 3px;
+
+    padding: 3px;
+}
+
+.signing-form__submit:hover {
+    background-color: var(--hover-bg-color);
+}
+
+.signing-form__content {
+    margin: auto 26px;
+}
