@@ -1,0 +1,26 @@
+@import url("../style.css");
+
+@import url("../components/header.css");
+@import url("../components/footer.css");
+@import url("../components/music-search.css");
+@import url("../components/track-container.css");
+
+.multi-line-tracks {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 7px;
+
+    padding: 9px 16px;
+}
+
+.multi-line-tracks>* {
+    width: 100%;
+    height: 46px;
+}
+
+.tracks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}

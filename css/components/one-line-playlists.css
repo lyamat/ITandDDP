@@ -1,0 +1,42 @@
+.one-line-playlists {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    min-width: var(--min-width);
+    padding: 14px 19px 16px;
+
+    gap: 14px;
+
+    background-color: var(--main-bg-color);
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+}
+
+.one-line-playlists__tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.one-line-playlists__tools>.primary-text {
+    font-size: var(--main-font-size);
+}
+
+.one-line-playlists__tools>.ref-text {
+    font-size: var(--secondary-font-size);
+}
+
+.one-line-playlists__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow: hidden;
+
+    height: 112px;
+
+    flex-wrap: wrap;
+    gap: 22px;
+}

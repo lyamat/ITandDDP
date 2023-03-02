@@ -1,0 +1,60 @@
+@import url("../style.css");
+
+@import url("../components/header.css");
+@import url("../components/footer.css");
+@import url("../components/music-search.css");
+@import url("../components/one-line-playlists.css");
+
+@import url("../components/popup.css");
+@import url("../pages/selected_playlist.css");
+@import url("../components/track-container.css");
+
+.multi-line-playlists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 22px;
+
+    row-gap: 14px;
+
+    align-items: stretch;
+
+    padding: 14px 19px;
+}
+
+.playlists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.cover-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 6px;
+}
+
+.cover-container:hover .play-pause-button {
+    visibility: visible;
+}
+
+.album__title {
+    font-size: var(--secondary-font-size);
+    color: var(--main-text-color);
+}
+
+.album__performer {
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-text-color);
+}
+
+.album__performer:hover {
+    text-decoration: underline;
+}
+
+.album__release-date {
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-text-color);
+}
