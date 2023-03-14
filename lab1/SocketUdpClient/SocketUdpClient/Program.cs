@@ -56,11 +56,26 @@ namespace SocketUdpClient
         {
             var hostEntry = Dns.GetHostEntry(hostName);
             var listeningSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            localhostIP = hostEntry.AddressList[1];
+
+            foreach (var address in hostEntry.AddressList)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    localhostIP = address;
+                    break;
+                }
+            }
+
+            if (localhostIP == null)
+            {
+                throw new Exception("No compatible IP address found.");
+            }
+
             var localEP = new IPEndPoint(localhostIP, port);
             listeningSocket.Bind(localEP);
             return listeningSocket;
         }
+
 
         private static void Sender(Socket listeningSocket, int remotePort)
         {

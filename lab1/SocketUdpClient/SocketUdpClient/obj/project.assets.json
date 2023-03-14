@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ilya\\Desktop\\isob\\SocketUdpClient\\SocketUdpClient\\SocketUdpClient.csproj",
+      "projectUniqueName": "C:\\Users\\Ilya\\Desktop\\itirod\\ITandDDP\\lab1\\SocketUdpClient\\SocketUdpClient\\SocketUdpClient.csproj",
       "projectName": "SocketUdpClient",
-      "projectPath": "C:\\Users\\Ilya\\Desktop\\isob\\SocketUdpClient\\SocketUdpClient\\SocketUdpClient.csproj",
+      "projectPath": "C:\\Users\\Ilya\\Desktop\\itirod\\ITandDDP\\lab1\\SocketUdpClient\\SocketUdpClient\\SocketUdpClient.csproj",
       "packagesPath": "C:\\Users\\Ilya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ilya\\Desktop\\isob\\SocketUdpClient\\SocketUdpClient\\obj\\",
+      "outputPath": "C:\\Users\\Ilya\\Desktop\\itirod\\ITandDDP\\lab1\\SocketUdpClient\\SocketUdpClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ilya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
