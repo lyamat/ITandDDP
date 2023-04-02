@@ -1,0 +1,245 @@
+@import url("audio__title.css");
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    z-index: 100;
+}
+
+
+.footer__content {
+    margin: auto;
+    height: 59px;
+
+    padding: 8px 14px;
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+    border-bottom-width: 0;
+
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+
+    background-color: var(--main-bg-color);
+}
+
+.player-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.player-container>* {
+    margin: auto 5px;
+}
+
+.player__icon {
+    position: relative;
+}
+
+.player__icon>.icon {
+    width: 28px;
+    height: 28px;
+}
+
+.player__icon>.icon>* {
+    fill: var(--main-svg-color);
+}
+
+.player__icon>.icon-play {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translateX(-35%) translateY(-50%);
+
+    width: 9px;
+    height: 11px;
+
+    z-index: 1;
+}
+
+.player__icon>.icon-pause {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 11px;
+    height: 11px;
+
+    visibility: hidden;
+}
+
+.player__icon.activated>.icon-play {
+    visibility: hidden;
+}
+
+.player__icon.activated>.icon-play+.icon-pause {
+    visibility: visible;
+}
+
+.player__icon>.icon-play>*,
+.player__icon>.icon-pause>* {
+    fill: var(--main-bg-color);
+}
+
+.player__next>svg,
+.player__prev>svg {
+    width: 11px;
+    height: 11px;
+}
+
+.player__next>svg>*,
+.player__prev>svg>* {
+    stroke: var(--secondary-svg-color);
+    fill: var(--secondary-svg-color);
+}
+
+.player__next:hover>svg>*,
+.player__prev:hover>svg>* {
+    stroke: var(--hover-svg-color);
+    fill: var(--hover-svg-color);
+}
+
+.player__item>* {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.player__cover {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.player__title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.audio__slider {
+    padding: 0;
+
+    display: inline;
+
+    height: 4px;
+}
+
+.slider {
+    --thumb-height: 10px;
+    --thumb-width: 10px;
+    --thumb-border-radius: 50%;
+
+    display: block;
+    -webkit-appearance: none;
+    margin: auto;
+    width: 100%;
+    min-width: 40px;
+    height: 4px;
+    background: var(--main-slider-color);
+    border-radius: 5px;
+    background-image: linear-gradient(var(--secondary-slider-color), var(--secondary-slider-color));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+
+input.slider[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: var(--thumb-height);
+    width: var(--thumb-width);
+    border-radius: var(--thumb-border-radius);
+    background: transparent;
+}
+
+input.slider[type="range"]::-moz-range-thumb {
+    display: none;
+
+    -webkit-appearance: none;
+    height: var(--thumb-height);
+    width: var(--thumb-width);
+    border-radius: var(--thumb-border-radius);
+    background: transparent;
+}
+
+input.slider[type="range"]::-ms-thumb {
+    display: none;
+
+    -webkit-appearance: none;
+    height: var(--thumb-height);
+    width: var(--thumb-width);
+    border-radius: var(--thumb-border-radius);
+    background: transparent;
+}
+
+
+input.slider[type="range"]:hover::-webkit-slider-thumb {
+    background: var(--secondary-slider-color);
+}
+
+input.slider[type="range"]:hover::-moz-range-thumb {
+    background: var(--secondary-slider-color);
+}
+
+input.slider[type="range"]:hover::-ms-thumb {
+    background: var(--secondary-slider-color);
+}
+
+.audio__progress-time {
+    height: fit-content !important;
+
+    font-size: var(--tertiary-font-size);
+    color: var(--secondary-text-color);
+
+    margin: auto 0 0;
+
+    flex-shrink: 0;
+}
+
+.player__volume {
+    height: 4px;
+    width: 40px;
+}
+
+.player__shuffle>.icon>* {
+    fill: var(--secondary-svg-color);
+    stroke: var(--secondary-svg-color);
+}
+
+.player__repeat>.icon>* {
+    fill: none;
+    stroke: var(--secondary-svg-color);
+    stroke-width: 1.5px;
+}
+
+.player__shuffle:hover>.icon>* {
+    stroke: var(--hover-svg-color);
+    fill: var(--hover-svg-color);
+}
+
+.player__repeat:hover>.icon>* {
+    stroke: var(--hover-svg-color);
+}
+
+.player__shuffle.activated>.icon>* {
+    stroke: var(--main-svg-color);
+    fill: var(--main-svg-color);
+}
+
+.player__repeat.activated>.icon>* {
+    stroke: var(--main-svg-color);
+}

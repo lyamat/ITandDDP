@@ -1,0 +1,75 @@
+.signing-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 320px;
+    max-width: 423px;
+    width: 100%;
+    height: 203px;
+
+    background-color: var(--main-bg-color);
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+}
+
+.signing-form * {
+    display: block;
+}
+
+.signing-form__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+}
+
+.signing-form__label {
+    display: inline;
+    font-size: 28px;
+    color: var(--main-text-color);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.signing-form__img {
+    display: inline;
+    height: 42px;
+}
+
+.signing-form__input {
+    background-color: transparent;
+    width: 100%;
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+
+    color: var(--input-text-color);
+}
+
+.signing-form__button {
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+
+    padding: 3px;
+}
+
+.signing-form__button:hover {
+    background-color: var(--hover-bg-color);
+}
+
+.signing-form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 100%;
+    padding: 18px 26px;
+}
+
+.signing-form__container>* {
+    margin: auto;
+}

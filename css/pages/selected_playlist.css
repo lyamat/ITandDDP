@@ -1,0 +1,31 @@
+@import url("../style.css");
+@import url("../components/playlist-info.css");
+@import url("../components/track-container.css");
+@import url("../components/footer.css");
+@import url("../components/header.css");
+
+.selected-playlist-container {    
+    position: relative;
+
+    z-index: 2;
+
+    min-width: var(--min-width);
+    max-width: 500px;
+    width: 100%;
+
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: var(--main-bg-color);
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+
+    margin: 5% auto auto;
+}
+
+.selected-playlist-container>* {
+    width: 100%;
+}

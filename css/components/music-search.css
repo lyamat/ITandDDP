@@ -1,0 +1,53 @@
+.music-search {
+    height: 64px;
+}
+
+.music-search__input {
+    background-color: transparent;
+
+    color: var(--input-text-color);
+
+    width: 100%;
+
+    padding-left: 10px;
+
+    border-width: 0 var(--main-border-width) 0 0;
+    border-style: solid;
+    border-color: var(--main-border-color);
+    border-radius: 0;
+}
+
+.music-search__button>.icon {
+    margin: auto;
+
+    width: 28px;
+    height: 28px;
+
+    filter: var(--static-svg-invert);
+}
+
+.music-search>.search-wrap {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    height: 30px;
+    margin: 0 20px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+}
+
+.music-search__button {
+    height: 100%;
+    width: 46px;
+
+    background-color: var(--main-button-bg-color);
+
+    border: none;
+}

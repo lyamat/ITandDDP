@@ -1,0 +1,59 @@
+@import url("../style.css");
+
+@import url("../components/header.css");
+@import url("../components/footer.css");
+@import url("../components/music-search.css");
+@import url("../components/one-line-playlists.css");
+@import url("../components/track-container.css");
+
+@import url("../components/popup.css");
+@import url("../pages/selected_playlist.css");
+
+.found-tracks {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    min-width: var(--min-width);
+    padding: 14px 19px 16px;
+
+    gap: 14px;
+}
+
+.found-tracks-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    row-gap: 4px;
+
+    /* max-height: 116px; */
+}
+
+.found-tracks-container>* {
+    height: 36px;
+    width: 100%;
+}
+
+.found-tracks__row-container {
+    --gap: 12px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    gap: var(--gap);
+}
+
+.found-tracks__row-container>* {
+    min-width: 130px;
+    max-width: calc((100% - var(--gap)) / 2);
+    width: 100%;
+}
+
+.found-tracks .track__cover {
+    width: 30px;
+    height: 30px;
+}

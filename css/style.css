@@ -1,0 +1,320 @@
+:root {
+    --main-border-radius: 3px;
+    --main-border-width: 1px;
+
+    --tertiary-svg-color: #FFFFFF;
+
+    --max-width: 822px;
+    --min-width: 320px;
+
+    --main-font-size: 14px;
+    --secondary-font-size: 12px;
+    --tertiary-font-size: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #121212;
+        --body-bg-color: #272829;
+        --header-bg-color: #1E1E1E;
+
+        --hover-bg-color: #252628;
+        --active-bg-color: #2B2C2D;
+
+        --main-text-color: #F9F6EF;
+        --secondary-text-color: #7D868E;
+        --tertiary-text-color: #757575;
+        --ref-text-color: #659AD6;
+
+        --input-text-color: #E1E3E6;
+        --track-num-text-color: #858585;
+
+        --main-svg-color: #5C8CC3;
+        --secondary-svg-color: #7D868E;
+        --hover-svg-color: #9A999B;
+
+        --main-border-color: #34393D;
+
+        --main-button-bg-color: #262B30;
+
+        --main-slider-color: #272829;
+        --secondary-slider-color: #5C8CC3;
+
+        --static-svg-invert: invert(100%);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: #FFFFFF;
+        --body-bg-color: #EDEEF0;
+        --header-bg-color: #FFFFFF;
+        --hover-bg-color: #F5F6F8;
+        --active-bg-color: #F2F3F5;
+
+        --main-text-color: #000000;
+        --secondary-text-color: #818C99;
+        --tertiary-text-color: #939393;
+        --ref-text-color: #2A5885;
+
+        --input-text-color: #000000;
+        --track-num-text-color: #828282;
+
+        --main-svg-color: #5181B8;
+        --secondary-svg-color: #9bA1AD;
+        --hover-svg-color: #828A99;
+
+        --main-border-color: #DCE1E6;
+
+        --main-button-bg-color: #E5EBF1;
+
+        --main-slider-color: #EDEEF0;
+        --secondary-slider-color: #5181B8;
+
+        --static-svg-invert: invert(0%);
+    }
+}
+
+@font-face {
+    font-family: CircularStd;
+    src: url("../fonts/CircularStdFont.otf");
+}
+
+@font-face {
+    font-family: ComicRelief;
+    src: url("../fonts/ComicReliefBold.otf");
+}
+
+@font-face {
+    font-family: ClearSansBold;
+    src: url("../fonts/ClearSansBold.ttf");
+}
+
+span,
+label,
+button,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: ClearSansBold, CircularStd, ClearSansBold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+
+main {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 79px;
+    width: 100%;
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    display: flex;
+}
+
+span,
+a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    text-decoration: none;
+}
+
+.primary-text {
+    color: var(--main-text-color);
+}
+
+.ref-text {
+    color: var(--ref-text-color);
+}
+
+.general-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    gap: 14px;
+
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+
+    margin: auto;
+}
+
+.general-container>* {
+    border: var(--main-border-width) solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+
+    background-color: var(--main-bg-color);
+}
+
+.album__cover {
+    display: block;
+    position: relative;
+
+    margin: 1px;
+
+    height: 110px;
+    width: 110px;
+}
+
+.button-icon {
+    display: block;
+
+    height: 110px;
+    width: 110px;
+}
+
+.button-icon>.icon {
+    display: inline;
+    position: relative;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 5px;
+}
+
+.album__cover:hover>.button-icon {
+    filter: brightness(50%);
+}
+
+.play-pause-button-wrap,
+.play-pause-button {
+    --play-pause-button__width: 21px;
+    --play-pause-button__height: 24px;
+    --play-pause-button__ml: 3px;
+    --play-pause-button__color: #fff;
+    --play-pause-button__hover-color: var(--hover-svg-color);
+}
+
+.track__cover-wrap .play-pause-button-wrap,
+.track__cover-wrap .play-pause-button {
+    --play-pause-button__width: 10px;
+    --play-pause-button__height: 12px;
+    --play-pause-button__ml: 2px;
+    --play-pause-button__color: #fff;
+    --play-pause-button__hover-color: var(--hover-svg-color);
+}
+
+.track__number-wrap .play-pause-button-wrap,
+.track__number-wrap .play-pause-button {
+    --play-pause-button__width: 10px;
+    --play-pause-button__height: 12px;
+    --play-pause-button__ml: 2px;
+    --play-pause-button__color: var(--main-svg-color);
+    --play-pause-button__hover-color: var(--main-svg-color);
+}
+
+.play-pause-button-wrap {
+    width: var(--play-pause-button__width);
+    height: var(--play-pause-button__height);
+
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-pause-button {
+    visibility: hidden;
+
+    width: calc(100% - var(--play-pause-button__ml));
+    height: 100%;
+    margin-right: 0;
+    margin-left: var(--play-pause-button__ml);
+
+    border-style: solid;
+    border-color: #0000 #0000 #0000 var(--play-pause-button__color);
+    border-top-width: calc(var(--play-pause-button__height) / 2);
+    border-right-width: 0;
+    border-bottom-width: calc(var(--play-pause-button__height) / 2);
+    border-left-width: calc(var(--play-pause-button__width) - var(--play-pause-button__ml));
+}
+
+.play-pause-button:hover {
+    border-color: #0000 #0000 #0000 var(--play-pause-button__hover-color);
+}
+
+.play-pause-button.activated {
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border-style: double;
+    border-width: 0 0 0 var(--play-pause-button__width);
+}
+
+.album__cover:hover .play-pause-button {
+    visibility: visible;
+}
+
+.cover-wrap {
+    min-width: none;
+    max-width: 42px;
+}
+
+.cover-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1px;
+
+    width: 110px;
+}
+
+.cover-container:hover .play-pause-button {
+    visibility: visible;
+}
+
+.album__title {
+    font-size: var(--secondary-font-size);
+    color: var(--main-text-color);
+}
+
+.album__performer {
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-text-color);
+}
+
+.album__performer:hover {
+    text-decoration: underline;
+}
+
+.album__release-date {
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-text-color);
+}
